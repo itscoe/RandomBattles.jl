@@ -23,7 +23,7 @@ be used internally, as generating the move from the name is a lot cleaner.
 function FastMove(gm_move::Dict{String,Any}, types)
     return FastMove(
             typings[gm_move["type"]],
-            (typings[gm_move["type"]] in types) ? Int8(12) : Int8(1),
+            (typings[gm_move["type"]] in types) ? Int8(12) : Int8(10),
             UInt8(gm_move["power"]),
             Int8(gm_move["energyGain"]),
             Int8(gm_move["cooldown"] ÷ 500)
